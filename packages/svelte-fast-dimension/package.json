@@ -1,0 +1,38 @@
+{
+  "name": "svelte-fast-dimension",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "bluwy",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "tsup-node --watch src",
+    "build": "tsup-node --dts",
+    "test": "tsm node_modules/uvu/bin.js tests"
+  },
+  "engines": {
+    "node": "^12.20 || ^14.13.1 || >= 16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluwy/svelte-fast-dimension.git",
+    "directory": "packages/svelte-fast-dimension"
+  },
+  "bugs": {
+    "url": "https://github.com/bluwy/svelte-fast-dimension/issues"
+  },
+  "homepage": "https://github.com/bluwy/svelte-fast-dimension#readme",
+  "devDependencies": {
+    "uvu": "^0.5.1"
+  }
+}
