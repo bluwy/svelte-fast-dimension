@@ -4,10 +4,10 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   # "checks" job runs on linux + node14 only and checks that install, build, lint and audit work
