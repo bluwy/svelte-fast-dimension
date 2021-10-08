@@ -19,6 +19,9 @@
     },
     "./package.json": "./package.json"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup-node --sourcemap --watch src",
     "build": "tsup-node --dts",
