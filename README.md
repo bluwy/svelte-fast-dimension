@@ -3,7 +3,9 @@
 [![npm version](https://img.shields.io/npm/v/svelte-fast-dimension)](https://www.npmjs.com/package/svelte-fast-dimension)
 [![CI](https://github.com/bluwy/svelte-fast-dimension/actions/workflows/ci.yml/badge.svg)](https://github.com/bluwy/svelte-fast-dimension/actions/workflows/ci.yml)
 
-Fast dimension bindings for Svelte, using ResizeObservers.
+Fast [dimension bindings](https://svelte.dev/tutorial/dimensions) using ResizeObservers.
+
+**Why?** Svelte currently uses an iframe technique to measure dimensions so it works in older browsers. However, creating multiple iframes has a big performance impact and sometimes [quirkyness](https://github.com/sveltejs/svelte/issues/4776). If your target browsers support [ResizeObserver](https://caniuse.com/resizeobserver), this can significantly improve dimension binding performance.
 
 ## Installation
 

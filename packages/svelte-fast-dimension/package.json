@@ -1,5 +1,6 @@
 {
   "name": "svelte-fast-dimension",
+  "description": "Fast dimension bindings using ResizeObservers",
   "version": "0.0.0",
   "license": "MIT",
   "author": "Bjorn Lu",
