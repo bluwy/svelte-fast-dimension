@@ -19,7 +19,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "dev": "tsup-node --watch --sourcemap src",
+    "dev": "tsup-node --sourcemap --watch src",
     "build": "tsup-node --dts",
     "test": "tsm node_modules/uvu/bin.js tests",
     "test:update": "tsm node_modules/uvu/bin.js tests -u"

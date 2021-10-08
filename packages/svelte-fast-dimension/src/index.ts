@@ -31,7 +31,7 @@ export function fastDimension(): PreprocessorGroup {
 				}
 			});
 
-			const importText = 'import { resize as ___resize } from "svelte-fast-dimension";';
+			const importText = 'import { resize as ___resize } from "svelte-fast-dimension/action";';
 			if (ast.module) {
 				s.appendLeft(ast.module.content.start, importText);
 			} else if (ast.instance) {
