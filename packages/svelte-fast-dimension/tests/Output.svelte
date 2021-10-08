@@ -1,4 +1,4 @@
-<script>import { resize as ___resize } from "svelte-fast-dimension";
+<script>import { resize as ___resize } from "svelte-fast-dimension/action";
 	let clientWidth, foo, w, h, w2, h2;
 </script>
 

@@ -33,7 +33,7 @@ At the meantime, you can try one of these libraries:
 
 ### Vite
 
-`svelte-fast-dimension` injects an import from `svelte-fast-dimension/action` when preprocessing. This won't be detected during Vite's prebundling phase, and will cause on-the-fly prebundling which slows startup time. To remedy this, add `svelte-fast-dimension/action` to [optimizeDeps.include](https://vitejs.dev/config/#optimizedeps-include)
+`svelte-fast-dimension` injects an import from `svelte-fast-dimension/action` when preprocessing. This won't be detected during Vite's prebundling phase, and will cause on-the-fly prebundling which slows startup time. To remedy this, add `svelte-fast-dimension/action` to [optimizeDeps.include](https://vitejs.dev/config/#optimizedeps-include).
 
 ## License
 
