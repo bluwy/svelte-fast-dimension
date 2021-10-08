@@ -24,6 +24,21 @@ export default {
 };
 ```
 
+Use dimension bindings as usual, it will use ResizeObservers under-the-hood:
+
+```html
+<script>
+	let a, b, c, d;
+</script>
+
+<div
+	bind:clientWidth="{a}"
+	bind:clientHeight="{b}"
+	bind:offsetWidth="{c}"
+	bind:offsetHeight="{d}"
+/>
+```
+
 ## Recipes
 
 ### Using with svelte-preprocess
