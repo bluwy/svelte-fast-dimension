@@ -1,24 +1,39 @@
-# @svitejs/project-template
+# svelte-fast-dimension
 
-PROJECT TAGLINE HERE
+Fast dimension bindings for Svelte, using ResizeObservers.
 
 ## Installation
 
 ```bash
-npm install --save-dev @svitejs/project-template
+npm install --save-dev svelte-fast-dimension
 ```
 
 ## Usage
 
 ```js
-// show em how it's done
+// svelte.config.js
+import { fastDimension } from 'svelte-fast-dimension';
+
+export default {
+	preprocess: [fastDimension()]
+};
 ```
 
-## Documentation
+## Recipes
 
-- some
-- doc
-- links
+### Using with svelte-preprocess
+
+Due to how Svelte applies preprocessors, using this with `svelte-preprocess` needs a bit more work to make sure we run this preprocessor **only after** `svelte-preprocess` finishes. There's [an RFC](https://github.com/sveltejs/rfcs/pull/56) to make this process clearer soon.
+
+At the meantime, you can try one of these libraries:
+
+- [svelte-sequential-preprocessor](https://github.com/pchynoweth/svelte-sequential-preprocessor)
+- [svelte-as-markup-preprocessor](https://github.com/firefish5000/svelte-as-markup-preprocessor)
+- [My custom gist](https://gist.github.com/bluwy/5fc6f97768b7f065df4e2dbb1366db4c)
+
+### Vite
+
+`svelte-fast-dimension` injects an import from `svelte-fast-dimension/action` when preprocessing. This won't be detected during Vite's prebundling phase, and will cause on-the-fly prebundling which slows startup time. To remedy this, add `svelte-fast-dimension/action` to [optimizeDeps.include](https://vitejs.dev/config/#optimizedeps-include)
 
 ## License
 
