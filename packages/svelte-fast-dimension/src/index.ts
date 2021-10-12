@@ -43,7 +43,7 @@ export function fastDimension(): PreprocessorGroup {
 			for (const [element, compiledExpressions] of elementToCompiledExpressions) {
 				s.appendLeft(
 					element.attributes[0].start,
-					`use:___resize on:fd:resize={(e) => { ${compiledExpressions.join('; ')} }}`
+					`use:___resize on:fd:resize={(e) => { ${compiledExpressions.join('; ')} }} `
 				);
 			}
 
