@@ -40,6 +40,12 @@
     "url": "https://github.com/bluwy/svelte-fast-dimension/issues"
   },
   "homepage": "https://github.com/bluwy/svelte-fast-dimension#readme",
+  "keywords": [
+    "svelte",
+    "preprocess",
+    "dimension",
+    "resize-observer"
+  ],
   "dependencies": {
     "magic-string": "^0.25.7"
   },
