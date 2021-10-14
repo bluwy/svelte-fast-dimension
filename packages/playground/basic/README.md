@@ -1,3 +1,0 @@
-# playground-basic
-
-Vite

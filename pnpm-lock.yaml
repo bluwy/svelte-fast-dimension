@@ -58,18 +58,6 @@ importers:
       tsup: 5.4.0_typescript@4.4.3
       typescript: 4.4.3
 
-  packages/playground/basic:
-    specifiers:
-      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.26
-      svelte: ^3.43.1
-      svelte-fast-dimension: workspace:*
-      vite: ^2.6.5
-    devDependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.26_svelte@3.43.1+vite@2.6.5
-      svelte: 3.43.1
-      svelte-fast-dimension: link:../../svelte-fast-dimension
-      vite: 2.6.5
-
   packages/playground/rollup:
     specifiers:
       '@rollup/plugin-commonjs': ^17.0.0
@@ -94,6 +82,18 @@ importers:
       rollup-plugin-terser: 7.0.2_rollup@2.58.0
       svelte: 3.43.1
       svelte-fast-dimension: link:../../svelte-fast-dimension
+
+  packages/playground/vite:
+    specifiers:
+      '@sveltejs/vite-plugin-svelte': ^1.0.0-next.26
+      svelte: ^3.43.1
+      svelte-fast-dimension: workspace:*
+      vite: ^2.6.5
+    devDependencies:
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.26_svelte@3.43.1+vite@2.6.5
+      svelte: 3.43.1
+      svelte-fast-dimension: link:../../svelte-fast-dimension
+      vite: 2.6.5
 
   packages/svelte-fast-dimension:
     specifiers:
