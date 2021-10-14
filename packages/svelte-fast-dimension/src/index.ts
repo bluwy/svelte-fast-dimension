@@ -33,8 +33,10 @@ export function fastDimension(): PreprocessorGroup {
 
 			const importText = 'import { resize as ___resize } from "svelte-fast-dimension/action";';
 			if (ast.module) {
+				// @ts-expect-error
 				s.appendLeft(ast.module.content.start, importText);
 			} else if (ast.instance) {
+				// @ts-expect-error
 				s.appendLeft(ast.instance.content.start, importText);
 			} else {
 				s.append(`<script>${importText}</script>`);
