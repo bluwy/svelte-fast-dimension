@@ -6,6 +6,16 @@ import type { PreprocessorGroup } from 'svelte/types/compiler/preprocess';
 const bindingNames = ['clientWidth', 'clientHeight', 'offsetWidth', 'offsetHeight'];
 const bindings = bindingNames.map((n) => 'bind:' + n);
 
+const expressionToString = (expression: any): string => {
+	if (expression.type == 'MemberExpression') {
+		const propName =
+			expression.property.type === 'Literal' ? expression.property.raw : expression.property.name;
+		const suffix = expression.computed ? `[${propName}]` : `.${propName}`;
+
+		return `${expressionToString(expression.object)}${suffix}`;
+	}
+	return expression.type === 'Literal' ? expression.raw : expression.name;
+};
 export function fastDimension(): PreprocessorGroup {
 	return {
 		// @ts-expect-error
@@ -25,7 +35,7 @@ export function fastDimension(): PreprocessorGroup {
 
 						const expressions = elementToCompiledExpressions.get(parent) as string[];
 
-						expressions.push(`${node.expression.name} = e.target.${node.name}`);
+						expressions.push(`${expressionToString(node.expression)} = e.target.${node.name}`);
 						s.overwrite(node.start, node.end, '');
 					}
 				}
