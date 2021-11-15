@@ -24,8 +24,8 @@ export function fastDimension(): PreprocessorGroup {
 							elementToCompiledExpressions.set(parent, []);
 
 						const expressions = elementToCompiledExpressions.get(parent) as string[];
-
-						expressions.push(`${node.expression.name} = e.target.${node.name}`);
+						const boundVar = s.slice(node.expression.start, node.expression.end);
+						expressions.push(`${boundVar} = e.target.${node.name}`);
 						s.overwrite(node.start, node.end, '');
 					}
 				}
