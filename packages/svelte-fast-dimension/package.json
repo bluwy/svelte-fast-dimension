@@ -53,7 +53,7 @@
     "svelte": "^3.43.1"
   },
   "devDependencies": {
-    "svelte": "^3.43.2",
+    "svelte": "^3.44.1",
     "uvu": "^0.5.2"
   }
 }
