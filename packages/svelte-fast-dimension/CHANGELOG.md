@@ -1,5 +1,11 @@
 # svelte-fast-dimension
 
+## 0.0.3
+
+### Patch Changes
+
+- Support binding on objects and arrays ([#8](https://github.com/bluwy/svelte-fast-dimension/pull/8))
+
 ## 0.0.2
 
 ### Patch Changes
