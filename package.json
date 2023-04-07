@@ -15,48 +15,14 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.18.0",
-    "@changesets/get-github-info": "^0.5.0",
-    "@types/node": "^16.11.7",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "cross-env": "^7.0.3",
-    "dotenv": "^10.0.0",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-html": "^6.2.0",
-    "eslint-plugin-markdown": "^2.2.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-svelte3": "^3.2.1",
-    "husky": "^7.0.4",
-    "lint-staged": "^11.2.6",
-    "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "rimraf": "^3.0.2",
-    "svelte": "^3.44.1",
-    "tsm": "^2.1.4",
-    "tsup": "^5.7.0",
-    "typescript": "^4.4.4"
+    "svelte": "^3.44.1"
   },
   "lint-staged": {
     "*.{js,ts,svelte,html,md,svx}": "eslint --fix",
     "*.{css,scss,svelte,html,js,ts,svx,md}": [
       "prettier --write"
     ]
-  },
-  "packageManager": "pnpm",
-  "engines": {
-    "pnpm": "^6.7.0",
-    "yarn": "forbidden, use pnpm",
-    "npm": "forbidden, use pnpm",
-    "node": "^12.20 || ^14.13.1 || >= 16"
-  },
-  "pnpm": {
-    "overrides": {
-      "esbuild": "^0.13.3",
-      "ansi-regex@>2.1.1 <5.0.1": "^5.0.1"
-    }
   }
 }
