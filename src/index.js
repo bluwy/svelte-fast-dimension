@@ -1,5 +1,6 @@
 import MagicString from 'magic-string'
-import { parse, walk } from 'svelte/compiler'
+import { parse } from 'svelte-parse-markup'
+import { walk } from 'svelte/compiler'
 
 const bindingNames = [
   'clientWidth',
@@ -12,7 +13,6 @@ const bindings = bindingNames.map((n) => 'bind:' + n)
 /** @type {import('.').fastDimension} */
 export function fastDimension() {
   return {
-    // @ts-expect-error
     markup({ content, filename }) {
       if (!bindings.some((b) => content.includes(b))) return
 
@@ -23,16 +23,20 @@ export function fastDimension() {
       const elementToCompiledExpressions = new Map()
 
       walk(ast.html, {
+        /**
+         * @param {any} node
+         * @param {any} parent
+         */
         enter(node, parent) {
           if (node.type === 'Binding' && bindingNames.includes(node.name)) {
-            if (!elementToCompiledExpressions.has(parent))
-              elementToCompiledExpressions.set(parent, [])
-
-            /** @type {string[]} */
-            const expressions = elementToCompiledExpressions.get(parent)
+            let expressions = elementToCompiledExpressions.get(parent)
+            if (!expressions) {
+              expressions = []
+              elementToCompiledExpressions.set(parent, expressions)
+            }
             const boundVar = s.slice(node.expression.start, node.expression.end)
             expressions.push(`${boundVar} = e.target.${node.name}`)
-            s.overwrite(node.start, node.end, '')
+            s.update(node.start, node.end, '')
           }
         }
       })
@@ -59,7 +63,7 @@ export function fastDimension() {
 
       return {
         code: s.toString(),
-        map: s.generateMap({ hires: true })
+        map: s.generateMap()
       }
     }
   }
