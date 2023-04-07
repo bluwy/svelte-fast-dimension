@@ -1,28 +1,51 @@
 {
-  "name": "svelte-fast-dimension-monorepo",
-  "private": true,
+  "name": "svelte-fast-dimension",
+  "description": "Fast dimension bindings using ResizeObserver",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": "Bjorn Lu",
+  "types": "index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": ["src/*"]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./action": {
+      "default": "./src/action.js"
+    }
+  },
   "scripts": {
-    "dev": "pnpm --dir packages/svelte-fast-dimension dev",
-    "build": "pnpm -r build",
-    "test": "pnpm -r test --workspace-concurrency=1",
-    "lint": "eslint '**/*.{js,ts,svelte,html,svx,md}'",
-    "lint:fix": "pnpm run lint -- --fix",
-    "format": "prettier '**/*.{css,scss,svelte,html,js,ts,svx,md}' --check",
-    "format:fix": "pnpm run format -- --write",
-    "fixup": "run-s lint:fix format:fix",
-    "release": "pnpm run build && pnpm changeset publish",
-    "prepare": "husky install"
+    "lint": "prettier **/*.{js,ts,css,md,svelte} --check --cache",
+    "format": "prettier **/*.{js,ts,css,md,svelte} --write --cache",
+    "test": "pnpm -r test"
+  },
+  "funding": "https://bjornlu.com/sponsor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluwy/svelte-fast-dimension.git",
+    "directory": "packages/svelte-fast-dimension"
+  },
+  "bugs": {
+    "url": "https://github.com/bluwy/svelte-fast-dimension/issues"
+  },
+  "keywords": [
+    "svelte",
+    "preprocess",
+    "dimension",
+    "resize-observer"
+  ],
+  "dependencies": {
+    "magic-string": "^0.30.0",
+    "svelte-parse-markup": "^0.1.1"
   },
   "devDependencies": {
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.5.0",
     "svelte": "^3.44.1"
-  },
-  "lint-staged": {
-    "*.{js,ts,svelte,html,md,svx}": "eslint --fix",
-    "*.{css,scss,svelte,html,js,ts,svx,md}": [
-      "prettier --write"
-    ]
   }
 }

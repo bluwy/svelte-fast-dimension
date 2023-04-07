@@ -1,6 +1,6 @@
 # svelte-fast-dimension
 
-Fast [dimension bindings](https://svelte.dev/tutorial/dimensions) using ResizeObservers.
+Fast [dimension bindings](https://svelte.dev/tutorial/dimensions) using ResizeObserver.
 
 **Why?** Svelte currently uses an iframe technique to measure dimensions so it works in older browsers. However, creating multiple iframes has a big performance impact and sometimes [quirkiness](https://github.com/sveltejs/svelte/issues/4776). If your target browsers support [ResizeObserver](https://caniuse.com/resizeobserver), this can significantly improve dimension binding performance.
 
