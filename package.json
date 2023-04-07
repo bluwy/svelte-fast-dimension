@@ -45,6 +45,7 @@
     "dimension",
     "resize-observer"
   ],
+  "packageManager": "pnpm@8.1.0",
   "dependencies": {
     "magic-string": "^0.30.0",
     "svelte-parse-markup": "^0.1.1"
