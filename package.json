@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Bjorn Lu",
+  "type": "module",
   "types": "index.d.ts",
   "typesVersions": {
     "*": {
-      "*": ["src/*"]
+      "*": [
+        "src/*"
+      ]
     }
   },
   "exports": {
@@ -22,7 +25,7 @@
   "scripts": {
     "lint": "prettier **/*.{js,ts,css,md,svelte} --check --cache",
     "format": "prettier **/*.{js,ts,css,md,svelte} --write --cache",
-    "test": "pnpm -r test"
+    "test": "node tests/index.js"
   },
   "funding": "https://bjornlu.com/sponsor",
   "repository": {
@@ -43,9 +46,13 @@
     "magic-string": "^0.30.0",
     "svelte-parse-markup": "^0.1.1"
   },
+  "peerDependencies": {
+    "svelte": "^3.44.1"
+  },
   "devDependencies": {
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.1"
+    "svelte": "^3.44.1",
+    "uvu": "^0.5.6"
   }
 }
