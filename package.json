@@ -22,6 +22,9 @@
       "default": "./src/action.js"
     }
   },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "lint": "prettier **/*.{js,ts,css,md,svelte} --check --cache",
     "format": "prettier **/*.{js,ts,css,md,svelte} --write --cache",
