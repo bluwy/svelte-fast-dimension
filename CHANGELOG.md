@@ -1,5 +1,10 @@
 # svelte-fast-dimension
 
+## 1.0.0
+
+- Export ESM only
+- Remove `svelte-preprocess` caveat
+
 ## 0.0.3
 
 ### Patch Changes
