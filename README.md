@@ -14,25 +14,25 @@ npm install --save-dev svelte-fast-dimension
 
 ```js
 // svelte.config.js
-import { fastDimension } from 'svelte-fast-dimension';
+import { fastDimension } from 'svelte-fast-dimension'
 
 export default {
-	preprocess: [fastDimension()]
-};
+  preprocess: [fastDimension()]
+}
 ```
 
 Use dimension bindings as usual, it will use ResizeObservers under-the-hood:
 
 ```html
 <script>
-	let a, b, c, d;
+  let a, b, c, d
 </script>
 
 <div
-	bind:clientWidth="{a}"
-	bind:clientHeight="{b}"
-	bind:offsetWidth="{c}"
-	bind:offsetHeight="{d}"
+  bind:clientWidth="{a}"
+  bind:clientHeight="{b}"
+  bind:offsetWidth="{c}"
+  bind:offsetHeight="{d}"
 />
 ```
 
