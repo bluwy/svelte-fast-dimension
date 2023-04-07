@@ -50,9 +50,9 @@
     "svelte": "^3.44.1"
   },
   "devDependencies": {
-    "prettier": "^2.4.1",
-    "prettier-plugin-svelte": "^2.5.0",
-    "svelte": "^3.44.1",
+    "prettier": "^2.8.7",
+    "prettier-plugin-svelte": "^2.10.0",
+    "svelte": "^3.58.0",
     "uvu": "^0.5.6"
   }
 }
