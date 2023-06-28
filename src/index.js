@@ -22,7 +22,7 @@ export function fastDimension() {
       /** @type {Map<any, string[]>} */
       const elementToCompiledExpressions = new Map()
 
-      walk(ast.html, {
+      walk(/** @type {any} */ (ast.html), {
         /**
          * @param {any} node
          * @param {any} parent

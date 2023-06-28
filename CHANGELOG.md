@@ -1,5 +1,9 @@
 # svelte-fast-dimension
 
+## Unreleased
+
+- Support Svelte 4
+
 ## 1.0.0
 
 - Export ESM only
