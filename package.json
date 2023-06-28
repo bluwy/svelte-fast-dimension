@@ -28,7 +28,8 @@
   "scripts": {
     "lint": "prettier \"**/*.{js,ts,css,md,svelte}\" --check --cache",
     "format": "prettier \"**/*.{js,ts,css,md,svelte}\" --write --cache",
-    "test": "node tests/index.js"
+    "test": "node tests/index.js",
+    "test-update": "node tests/index.js -u"
   },
   "funding": "https://bjornlu.com/sponsor",
   "repository": {

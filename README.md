@@ -42,12 +42,13 @@ Use dimension bindings as usual, it will use ResizeObservers under-the-hood:
 
 `svelte-fast-dimension` injects an import from `svelte-fast-dimension/action` when preprocessing. This won't be detected during Vite's prebundling phase, and will cause on-the-fly prebundling which slows startup time. To fix this, add `svelte-fast-dimension/action` to [optimizeDeps.include](https://vitejs.dev/config/dep-optimization-options.html#optimizedeps-include).
 
-## Development
+## Sponsors
 
-- `pnpm i` to install dependencies
-- `pnpm dev` to run development build
-- `pnpm test` to run tests
-- `pnpm build` to run build
+<p align="center">
+  <a href="https://bjornlu.com/sponsors.svg">
+    <img src="https://bjornlu.com/sponsors.svg" alt="Sponsors" />
+  </a>
+</p>
 
 ## License
 
