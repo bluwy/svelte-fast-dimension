@@ -9,14 +9,14 @@
     "preview": "sirv public --no-clear"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-terser": "^0.4.0",
-    "rollup": "^3.20.2",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "rollup": "^3.25.3",
     "rollup-plugin-css-only": "^4.3.0",
     "rollup-plugin-livereload": "^2.0.5",
-    "rollup-plugin-svelte": "^7.1.4",
-    "svelte": "^3.58.0",
+    "rollup-plugin-svelte": "^7.1.6",
+    "svelte": "^3.59.2",
     "svelte-fast-dimension": "workspace:*"
   },
   "dependencies": {
