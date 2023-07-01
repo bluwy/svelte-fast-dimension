@@ -36,6 +36,7 @@ export function fastDimension() {
             }
             const boundVar = s.slice(node.expression.start, node.expression.end)
             expressions.push(`${boundVar} = e.target.${node.name}`)
+            // TODO: make sourcemap point the above new code to this old code
             s.update(node.start, node.end, '')
           }
         }
@@ -63,7 +64,7 @@ export function fastDimension() {
 
       return {
         code: s.toString(),
-        map: s.generateMap()
+        map: s.generateMap({ hires: true })
       }
     }
   }
