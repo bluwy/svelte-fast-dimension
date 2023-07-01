@@ -1,7 +1,7 @@
 {
   "name": "svelte-fast-dimension",
   "description": "Fast dimension bindings using ResizeObserver",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "author": "Bjorn Lu",
   "type": "module",
@@ -34,8 +34,7 @@
   "funding": "https://bjornlu.com/sponsor",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bluwy/svelte-fast-dimension.git",
-    "directory": "packages/svelte-fast-dimension"
+    "url": "git+https://github.com/bluwy/svelte-fast-dimension.git"
   },
   "bugs": {
     "url": "https://github.com/bluwy/svelte-fast-dimension/issues"

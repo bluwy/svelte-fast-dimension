@@ -1,8 +1,9 @@
 # svelte-fast-dimension
 
-## Unreleased
+## 1.1.0
 
 - Support Svelte 4
+- Generate hi-res sourcemap
 
 ## 1.0.0
 
