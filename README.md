@@ -2,7 +2,10 @@
 
 Fast [dimension bindings](https://svelte.dev/tutorial/dimensions) using ResizeObserver.
 
-**Why?** Svelte currently uses an iframe technique to measure dimensions so it works in older browsers. However, creating multiple iframes has a big performance impact and sometimes [quirkiness](https://github.com/sveltejs/svelte/issues/4776). If your target browsers support [ResizeObserver](https://caniuse.com/resizeobserver), this can significantly improve dimension binding performance.
+> [!NOTE]
+> This package is no longer needed if you're using Svelte 5 as it now uses `ResizeObserver` itself.
+
+**Why?** Svelte 3 & 4 used an iframe technique to measure dimensions so it works in older browsers. However, creating multiple iframes has a big performance impact and sometimes [quirkiness](https://github.com/sveltejs/svelte/issues/4776). If you already target browsers that support [ResizeObserver](https://caniuse.com/resizeobserver), this can significantly improve dimension binding performance.
 
 ## Installation
 
